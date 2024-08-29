@@ -31,14 +31,14 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ .Chart.Name }}
+        - name: fastapi
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .karinapapa/fastzero }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          image: karinapapa/fastzero:latest
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: {{ .Values.service.port }}
+              containerPort: 8000
               protocol: TCP
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
