@@ -1,5 +1,5 @@
 api: 
-  image: karinapapa/fastzero
+  image: 
   ingress:
     host: knz-local.com
     ingressClassName: nginx
