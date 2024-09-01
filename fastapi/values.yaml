@@ -1,5 +1,10 @@
-value 
-
+api: 
+  image: karinapapa/fastzero
+  ingress:
+    host: knz-local.com
+    ingressClassName: nginx
+  service:
+    type: ClusterIP
 
  
 
