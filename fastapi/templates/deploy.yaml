@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apache-deployment
+  name: {{ .Release.Name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: apache
+      app: {{ .Release.Name }}
   template:
     metadata:
       labels: ##variavel
-        app: apache
+        app: {{ .Release.Name }}
     spec:
       containers:
-      - name: apache
+      - name: {{ .Release.Name }}
         image: {{ .Values.api.image }}
         ports:
         - containerPort: 8000

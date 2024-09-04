@@ -1,5 +1,6 @@
+replicas: 1
 api: 
-  image: 
+  image: karinapapa/fastzero:latest
   ingress:
     host: knz-local.com
     ingressClassName: nginx
