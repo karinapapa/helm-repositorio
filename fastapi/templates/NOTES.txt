@@ -1,4 +1,0 @@
-Instalando
-Verificar recursos: kubectl get all -n {{ .Release.Name }}-ns
-Exibir a aplicação em uma porta host execute:
-kubectl port-forward service/api-lb <PortaHost>:8000 -n api-ns
