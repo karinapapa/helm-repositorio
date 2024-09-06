@@ -10,3 +10,4 @@ spec:
       targetPort: 8000
   selector: 
     app: {{ .Release.Name }}
+  type: {{ .Values.api.service.type}}

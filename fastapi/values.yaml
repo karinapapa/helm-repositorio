@@ -5,7 +5,7 @@ api:
     host: knz-local.com
     ingressClassName: nginx
   service:
-    type: LoadBalancer
+    type: NodePort
 
  
 
