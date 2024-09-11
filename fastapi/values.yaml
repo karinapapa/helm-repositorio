@@ -1,4 +1,4 @@
-replicas: 1
+replicas: 2
 api: 
   image: karinapapa/fastzero:latest
   ingress:

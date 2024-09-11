@@ -6,8 +6,10 @@ spec:
   selector:
     app: {{ .Release.Name }}
   ports:
-    - port: 8000
-      targetPort: 8000
+    - port: 80
+      targetPort: 80
   selector: 
     app: {{ .Release.Name }}
   type: {{ .Values.api.service.type}}
+
+  ##N3bZec9KN-mx9bg7
