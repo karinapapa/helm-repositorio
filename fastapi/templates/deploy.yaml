@@ -17,18 +17,20 @@ spec:
         image: {{ .Values.api.image }}
         ports:
         - containerPort: 8000
+    ## Container do NGINX
       - name: nginx
         image: nginx:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         volumeMounts:
         - name: nginx-config
-          mountPath: etc/nginx/nginx-conf
+          mountPath: /etc/nginx/conf.d
           subPath: nginx.conf
       volumes:
-      - name: nginx-config
-        configMap:
-          name: nginx-config
+        - name: nginx-config
+          configMap:
+            name: nginx-config-map
+      
         
     
 
